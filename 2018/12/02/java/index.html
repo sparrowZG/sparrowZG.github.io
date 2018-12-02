@@ -1,0 +1,134 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>java | 小小少年W</title><link rel="stylesheet" type="text/css" href="//fonts.neworld.org/css?family=Source+Code+Pro"><link rel="stylesheet" type="text/css" href="/css/style.css?v=2.0.1"><link rel="stylesheet" type="text/css" href="/css/highlight.css?v=2.0.1"><link rel="Shortcut Icon" href="/favicon.ico"><link rel="bookmark" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">java</h1><a id="logo" href="/.">小小少年W</a><p class="description"></p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div><div id="search-form"><div id="result-mask" class="hide"></div><label><input id="search-key" type="text" autocomplete="off" placeholder="Arama"></label><div id="result-wrap" class="hide"><div id="search-result"></div></div><div class="hide"><template id="search-tpl"><div class="item"><a href="/{path}" title="{title}"><div class="title">{title}</div><div class="time">{date}</div><div class="tags">{tags}</div></a></div></template></div></div></div><div id="layout" class="layout-g"><div class="layout-l"><div class="content_container"><div class="post"><h1 class="post-title">java</h1><div class="post-meta"><a href="/2018/12/02/java/#comments" class="comment-count"></a><p><span class="date">Dec 02, 2018</span><span><i id="busuanzi_container_page_pv"><i id="busuanzi_value_page_pv"></i><i>点击</i></i></span></p></div><div class="post-content"><h5 id="1-java"><a href="#1-java" class="headerlink" title="1.java"></a>1.java</h5><ul>
+<li>Java核心思想</li>
+<li>Java技术卷I（推荐）</li>
+</ul>
+<h5 id="2-数据结构与算法分析（java语言描述）"><a href="#2-数据结构与算法分析（java语言描述）" class="headerlink" title="2.数据结构与算法分析（java语言描述）"></a>2.数据结构与算法分析（java语言描述）</h5><h5 id="可移植性"><a href="#可移植性" class="headerlink" title="可移植性"></a>可移植性</h5><h5 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h5><p>打开命令行：Ctrl+ ·</p>
+<p>Java是半编译，半解释</p>
+<p>编译：javac </p>
+<p>用编译命令javac将<em>.Java（源文件）编译为\</em>.class文件</p>
+<p>class文件 为平台无关的二进制文件，提供给JVM虚拟机</p>
+<p>解释命令：Java</p>
+<p>使用java命令实际上启动了JVM虚拟机进程（软件）来将二进制class文件翻译为平台相关的可执行文件并执行主方法中字符数组传值“</p>
+<p>使用java命令解释二进制class文件传值</p>
+<p>表示运行Day1文件并将hello world </p>
+<p>主方法一定实在主类中定义，并且一个源文件只有一个主类</p>
+<p>源文件中若有中文，编译时使用如下命令</p>
+<p>javac -encoding UTF-8 源文件名称</p>
+<p>1.java 数据类型与运算符</p>
+<p>1.1java注释</p>
+<p>a.  单行注释  //</p>
+<p>b.  多行注释</p>
+<p>c.  文档注释/*<em>   </em>/</p>
+<h4 id="1-2-java标识符（变量，常量，类-，函数等的名称）"><a href="#1-2-java标识符（变量，常量，类-，函数等的名称）" class="headerlink" title="1.2 java标识符（变量，常量，类 ，函数等的名称）"></a>1.2 java标识符（变量，常量，类 ，函数等的名称）</h4><h6 id="1-2-1-标识符要求"><a href="#1-2-1-标识符要求" class="headerlink" title="1.2.1 标识符要求"></a>1.2.1 标识符要求</h6><p>由字母，数字，_ 组成，其中不能以数字开头，不能使用关键字</p>
+<p>命名规范：驼峰命名法</p>
+<p>大驼峰：类名 ，eg: class Demo     class FirstDemo</p>
+<p>小驼峰：对于变量，函数，</p>
+<ul>
+<li>只含有一个单词，全部小写；first</li>
+<li>多个单词，每个单词首字母大写；eg：FirstName </li>
+</ul>
+<p>常量命名：</p>
+<p>eg：final   int     MY_INT_VALUE = 10;</p>
+<h4 id="1-3数据类型"><a href="#1-3数据类型" class="headerlink" title="1.3数据类型"></a>1.3数据类型</h4><h5 id="1-3-1基本数据类型（8大基本数据类型）"><a href="#1-3-1基本数据类型（8大基本数据类型）" class="headerlink" title="1.3.1基本数据类型（8大基本数据类型）"></a>1.3.1基本数据类型（8大基本数据类型）</h5><ul>
+<li><p>数值型（5个）</p>
+<ul>
+<li><strong>整形</strong></li>
+</ul>
+<p>byte：一个字节，</p>
+<p>short：2个字节，</p>
+<p>int：4个字节，（推荐整数）</p>
+<h6 id="若整形常量在byte的范围内，整形常量可以直接赋值给byte，无须强转"><a href="#若整形常量在byte的范围内，整形常量可以直接赋值给byte，无须强转" class="headerlink" title="若整形常量在byte的范围内，整形常量可以直接赋值给byte，无须强转"></a>若整形常量在byte的范围内，整形常量可以直接赋值给byte，无须强转</h6></li>
+</ul>
+<p>  long：8个字节，</p>
+<ul>
+<li><p><strong>浮点型</strong></p>
+<p>**钱的话就用DigDecimal类型吧；</p>
+<p>double：8个字节</p>
+<p>java中描述小数时默认是double  ，</p>
+<p>float：4个字节</p>
+<p>申明一个float型，需要添加f或F；</p>
+</li>
+</ul>
+<p>小数默认是double 类型</p>
+<p>不能将   float x =  3.14   是错误的</p>
+<ul>
+<li><p>在java中任何一个整形常量都是int类型</p>
+<p>java中声明long常量，需要在数字后加（L）</p>
+<p>范围小的数据类型可以自动转为范围大的数据类型</p>
+<p>范围大的数据类型需要强制转换为范围小的数据类型（有精度误差）</p>
+<p>所有数据类型默认值，需要结合类来观察，方法中的局部变量不存在默认值（局部变量必须先赋值后使用）</p>
+</li>
+<li><p><strong>字符型</strong></p>
+<p>表示无符号的16位整数Unicode   -encoding  UTF-8    </p>
+<p>char：<strong>2</strong>个字节，（默认值\u0000）</p>
+<p>\u0041:A使用16进制；</p>
+</li>
+</ul>
+<ul>
+<li><p>转义字符</p>
+<p>\ : \‘</p>
+<p>\user  :\\user</p>
+</li>
+<li><p><strong>布尔型</strong></p>
+<p>booler：1位(<strong>false</strong>)</p>
+</li>
+</ul>
+<p><strong><em>注意</em></strong>：byte： byte = 125；是可以的</p>
+<h5 id="1-3-2引用数据类型（数组，类，接口）"><a href="#1-3-2引用数据类型（数组，类，接口）" class="headerlink" title="1.3.2引用数据类型（数组，类，接口）"></a>1.3.2引用数据类型（数组，类，接口）</h5><p>String：“abcdefg”：必须使用双引号引起来：字符串常量：：内置的类名</p>
+<h4 id="数据的转换"><a href="#数据的转换" class="headerlink" title="数据的转换"></a>数据的转换</h4><h3 id="java运算符"><a href="#java运算符" class="headerlink" title="java运算符"></a>java运算符</h3><p>+-*/%</p>
+<p>System.out.println(‘A’+’B’);</p>
+<p>System.out.println(9876/1000*1000);</p>
+<p>注意结果为9000；</p>
+<p>正数除以0会出现除0错误</p>
+<p>小数除以0会是正的无穷大或者负的无穷大</p>
+<p>NaN：0.0除以0.0   时》：自己和自己都不等</p>
+<h6 id="逻辑运算符（-amp-amp-！）"><a href="#逻辑运算符（-amp-amp-！）" class="headerlink" title="逻辑运算符（||,&amp;&amp;,！）"></a>逻辑运算符（||,&amp;&amp;,！）</h6><p>​            ||(短路或)</p>
+<p>​            &amp;&amp;（短路与）</p>
+<h6 id="关系运算符"><a href="#关系运算符" class="headerlink" title="关系运算符"></a>关系运算符</h6><h6 id="数据类型-变量-布尔类型表达式？ture：false"><a href="#数据类型-变量-布尔类型表达式？ture：false" class="headerlink" title="数据类型      变量   = 布尔类型表达式？ture：false"></a>数据类型      变量   = 布尔类型表达式？ture：false</h6><h6 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h6><p>| ， &amp;</p>
+<p>++  ——：：自加自减：都有前置和后置之分</p>
+<p>前置：++result ：表示对result加1后的结果进行运算</p>
+<p>后置：result++：表示对result加1 之前的值进行运算</p>
+<p><strong><em>三元运算符</em></strong>：</p>
+<p>变量类型    变量 =  表达式 ？ 值1：值2；</p>
+<h4 id="移位操作符"><a href="#移位操作符" class="headerlink" title="移位操作符"></a>移位操作符</h4><p>&lt;&lt;(左移)       &gt;&gt;（右移）           &gt;&gt;&gt;（无符号右移）：：右移加0</p>
+<p><strong><em>梳理</em></strong>：<br>数据类型：</p>
+<p>基本数据类型byte1 char2 short2  int4   long4  float4  double8  boolean<strong>1bit</strong>   ：：引用数据类型String</p>
+<p>默认int ，默认double</p>
+<h4 id="java中的控制方法与方法定义"><a href="#java中的控制方法与方法定义" class="headerlink" title="java中的控制方法与方法定义"></a>java中的控制方法与方法定义</h4><p>程序结构：<br>顺序结构，分支结构，循环结构</p>
+<p>分支结构（if，else，switch）</p>
+<p>swith（int|char|enum|String）</p>
+<p>case 表示分支</p>
+<p>分支结束使用break，结束分支语句 </p>
+<p>循环结构</p>
+<p>for(初始化语句1；结束条件2；条件更新3){</p>
+<p>​          执行代码4；</p>
+<p>}</p>
+<p>while（结束条件）{</p>
+<p>}</p>
+<p>do{ } while（结束条件）</p>
+<p>continue；</p>
+<p>break；</p>
+<h5 id="for-each-用于数组输出"><a href="#for-each-用于数组输出" class="headerlink" title="for - each 用于数组输出"></a>for - each 用于数组输出</h5><p>用于数组与类集的输出，对于原集合的修改依然采用原来for循环。</p>
+<p>语法</p>
+<p>for（数据类型 临时变量名称 ：数组名称）{</p>
+<p>}</p>
+<h4 id="循环的性能优化"><a href="#循环的性能优化" class="headerlink" title="循环的性能优化"></a>循环的性能优化</h4><p>变量定义在循环外：：尽量将小的值放到外面：：</p>
+<h3 id="java中的方法"><a href="#java中的方法" class="headerlink" title="java中的方法"></a>java中的方法</h3><p>方法的定义与使用（形参只用值传递）</p>
+<p>声明：</p>
+<p>public static 方法返回值 方法名称（[参数类型 变量]。。。。）{</p>
+<p>​              方法体代码；</p>
+<p>​             return    返回值</p>
+<p>}</p>
+<p>当方法以void声明时，表示此方法无返回值；</p>
+<p>但是void</p>
+<h4 id="方法重载（override）"><a href="#方法重载（override）" class="headerlink" title="方法重载（override）"></a>方法重载（override）</h4><p>定义：方法名称相同参数的类型，【顺序】个数不同，<strong>与返回值无关！！！！</strong></p>
+<p>方法签名：方法名称，参数</p>
+<p>开发规范：：重载方法   请保证返回值类型一值；</p>
+<h4 id="方法递归（循环实现）"><a href="#方法递归（循环实现）" class="headerlink" title="方法递归（循环实现）"></a>方法递归（循环实现）</h4><p>1.用递归求阶乘</p>
+<p>2.汉诺塔</p>
+<h4 id="方法重写"><a href="#方法重写" class="headerlink" title="方法重写"></a>方法重写</h4><h3 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h3><p>break  outter：</p>
+<p>break &lt;标签名称&gt;;</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">outter:<span class="keyword">for</span>()&#123;</span><br><span class="line">    <span class="keyword">for</span>()&#123;</span><br><span class="line">        <span class="keyword">break</span> outter;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="C:\Users\zg\Desktop\java.png" alt="Java虚拟机的作用"></p>
+</div><div class="tags"><a href="/tags/javaSE/">javaSE</a></div><div class="post-share"><div class="bdsharebuttonbox"><span style="float:left;line-height: 28px;height: 28px;font-size:16px;font-weight:blod">分享到：</span><a href="#" data-cmd="more" class="bds_more"></a><a href="#" data-cmd="mshare" title="分享到一键分享" class="bds_mshare"></a><a href="#" data-cmd="fbook" title="分享到Facebook" class="bds_fbook"></a><a href="#" data-cmd="twi" title="分享到Twitter" class="bds_twi"></a><a href="#" data-cmd="linkedin" title="分享到linkedin" class="bds_linkedin"></a><a href="#" data-cmd="youdao" title="分享到有道云笔记" class="bds_youdao"></a><a href="#" data-cmd="evernotecn" title="分享到印象笔记" class="bds_evernotecn"></a><a href="#" data-cmd="weixin" title="分享到微信" class="bds_weixin"></a><a href="#" data-cmd="qzone" title="分享到QQ空间" class="bds_qzone"></a><a href="#" data-cmd="tsina" title="分享到新浪微博" class="bds_tsina"></a></div></div><div class="post-nav"><a href="/2018/11/22/求数组中只出现一次的数-1/" class="next">求数组中只出现一次的数</a></div><div id="comments"></div></div></div></div><div class="layout-r"><div id="sidebar"><div class="search-pla"></div><div id="toc" class="widget"><div class="widget-title"><i class="fa fa-fei">文章目录</i></div><ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-java"><span class="toc-text">1.java</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-数据结构与算法分析（java语言描述）"><span class="toc-text">2.数据结构与算法分析（java语言描述）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#可移植性"><span class="toc-text">可移植性</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#多线程"><span class="toc-text">多线程</span></a></li></ol><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-java标识符（变量，常量，类-，函数等的名称）"><span class="toc-text">1.2 java标识符（变量，常量，类 ，函数等的名称）</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#1-2-1-标识符要求"><span class="toc-text">1.2.1 标识符要求</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3数据类型"><span class="toc-text">1.3数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-1基本数据类型（8大基本数据类型）"><span class="toc-text">1.3.1基本数据类型（8大基本数据类型）</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#若整形常量在byte的范围内，整形常量可以直接赋值给byte，无须强转"><span class="toc-text">若整形常量在byte的范围内，整形常量可以直接赋值给byte，无须强转</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-2引用数据类型（数组，类，接口）"><span class="toc-text">1.3.2引用数据类型（数组，类，接口）</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数据的转换"><span class="toc-text">数据的转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#java运算符"><span class="toc-text">java运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#逻辑运算符（-amp-amp-！）"><span class="toc-text">逻辑运算符（||,&amp;&amp;,！）</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#关系运算符"><span class="toc-text">关系运算符</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#数据类型-变量-布尔类型表达式？ture：false"><span class="toc-text">数据类型      变量   = 布尔类型表达式？ture：false</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#位运算符"><span class="toc-text">位运算符</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#移位操作符"><span class="toc-text">移位操作符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#java中的控制方法与方法定义"><span class="toc-text">java中的控制方法与方法定义</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#for-each-用于数组输出"><span class="toc-text">for - each 用于数组输出</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#循环的性能优化"><span class="toc-text">循环的性能优化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#java中的方法"><span class="toc-text">java中的方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#方法重载（override）"><span class="toc-text">方法重载（override）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#方法递归（循环实现）"><span class="toc-text">方法递归（循环实现）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#方法重写"><span class="toc-text">方法重写</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#循环语句"><span class="toc-text">循环语句</span></a></li></div><div class="widget"><div class="widget-title"><i class="fa fa-xie"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/java/">java</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/22/求数组中只出现一次的数-1/">求数组中只出现一次的数</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/18/求数组中只出现一次的数/">求数组中只出现一次的数</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/12/code_Hanoi_11_12/">code_Hanoi</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/11/code_11_11/">code</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/09/Canp_5_2/">Canp_119</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/08/code_4/">code</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/07/求最大公约数的三种方法/">求最大公约数的三种方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/07/code_3/">code_3</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/07/Candp_5/">Candp_5</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-biao"> 标签</i></div><div class="tagcloud"><a href="/tags/c语言/" style="font-size: 15px;">c语言</a> <a href="/tags/javaSE/" style="font-size: 15px;">javaSE</a> <a href="/tags/c语言，code/" style="font-size: 15px;">c语言，code</a> <a href="/tags/C语言/" style="font-size: 15px;">C语言</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-archive"> 归档</i></div><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-you"> 友情链接</i></div><ul></ul><a href="http://www.example1.com/" title="site-name1" target="_blank">site-name1</a><ul></ul><a href="http://www.example2.com/" title="site-name2" target="_blank">site-name2</a><ul></ul><a href="http://www.example3.com/" title="site-name3" target="_blank">site-name3</a></div></div></div></div><a id="totop" href="#top"></a><div id="footer"><div class="footer-info"><p><a href="/baidusitemap.xml">Baidu Site Haritası</a> |  <a href="/atom.xml">订阅</a> |  <a href="/about/">关于</a></p><p>本站总访问量：<i id="busuanzi_container_site_pv"><i id="busuanzi_value_site_pv"></i></i>次</p><p><span> Copyright &copy;<a href="/." rel="nofollow">zhangge.</a></span><span> Theme by<a rel="nofollow" target="_blank" href="https://github.com/chaooo/hexo-theme-BlueLake"> BlueLake.</a></span><span> Count by<a href="http://busuanzi.ibruce.info/"> busuanzi.</a></span><span> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a></span></p></div></div></div><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script type="text/javascript" src="/js/search.json.js?v=2.0.1"></script><script type="text/javascript" src="/js/toctotop.js?v=2.0.1" async></script><script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["mshare","weixin","tsina","qzone","linkedin","fbook","twi","print","renren","sqq","evernotecn","bdysc","tqq","tqf","bdxc","kaixin001","tieba","douban","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","h163","copy"],"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"image":{"viewList":["tsina","qzone","weixin","fbook","twi","linkedin","youdao","evernotecn","mshare"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["tsina","qzone","weixin","fbook","twi","linkedin","youdao","evernotecn","mshare"]}};with(document)0[(getElementsByTagName('head')[0]||head).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script><script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
